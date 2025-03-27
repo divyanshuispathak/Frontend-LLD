@@ -19,14 +19,18 @@ import { useQuery } from "@tanstack/react-query";
 // });
 
 const Body = () => {
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchData = async () => {
     try {
+      setLoading(true);
       const response = await fetch("https://meme-api.com/gimme/20");
       const data = await response.json();
       console.log("Data from API", data);
-      setProducts(data.memes);
+      setLoading(false);
+      // setProducts(data.memes);
+      setProducts((memes) => [...memes, ...data.memes]);
     } catch (error) {
       setError(err.message);
     }
@@ -34,17 +38,20 @@ const Body = () => {
 
   useEffect(() => {
     fetchData();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return !products ? (
-    <div className="flex flex-wrap gap-4 mb-4 ml-4">
-      {Array(15)
-        .fill(0)
-        .map((_, index) => (
-          <Shimmer key={index} />
-        ))}
-    </div>
-  ) : (
+  const handleScroll = () => {
+    if(window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+      console.log("fetch more data");
+      fetchData();
+    }
+  }
+
+  return (
     <div className="bg-gray-200">
       <h2 className="text-xl font-bold mb-4 ml-4">Products</h2>
       <ul className="flex flex-wrap gap-4">
@@ -52,6 +59,15 @@ const Body = () => {
           <ProductCard key={index} productData={product} />
         ))}
       </ul>
+      {
+        loading && <div className="flex flex-wrap gap-4 mb-4 ml-4">
+        {Array(15)
+          .fill(0)
+          .map((_, index) => (
+            <Shimmer key={index} />
+          ))}
+      </div>
+      }
     </div>
   );
 };
