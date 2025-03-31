@@ -10,6 +10,7 @@ const MiddleHeader = () => {
         <NavLink to='/home'>Home</NavLink>
         <NavLink to='/about'>About</NavLink>
         <NavLink to='/contact'>Contact</NavLink>
+        <NavLink to='/accordion'>Accordion</NavLink>
     </div>
   )
 }

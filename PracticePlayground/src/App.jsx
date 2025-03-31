@@ -4,6 +4,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Body from "./components/Body";
 import Header from "./components/Header";
+import Accordion from "./components/Accordion";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/accordion" element={<Accordion />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
