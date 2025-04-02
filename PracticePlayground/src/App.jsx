@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Body from "./components/Body";
 import Header from "./components/Header";
 import Accordion from "./components/Accordion";
+import NestedComments from "./components/comments/NestedComments";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/accordion" element={<Accordion />}></Route>
+          <Route path="/nested-comments" element={<NestedComments />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

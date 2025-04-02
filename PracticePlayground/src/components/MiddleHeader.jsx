@@ -7,10 +7,11 @@ import { NavLink } from 'react-router-dom'
 const MiddleHeader = () => {
   return (
     <div className='flex gap-5 p-2 m-2'>
-        <NavLink to='/home'>Home</NavLink>
-        <NavLink to='/about'>About</NavLink>
-        <NavLink to='/contact'>Contact</NavLink>
-        <NavLink to='/accordion'>Accordion</NavLink>
+        <NavLink className="hover:bg-cyan-400" to='/home'>Home</NavLink>
+        <NavLink className="hover:bg-cyan-400" to='/about'>About</NavLink>
+        <NavLink className="hover:bg-cyan-400" to='/contact'>Contact</NavLink>
+        <NavLink className="hover:bg-cyan-400" to='/accordion'>Accordion</NavLink>
+        <NavLink className="hover:bg-cyan-400" to='/nested-comments'>Nested-Comments</NavLink>
     </div>
   )
 }
