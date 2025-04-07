@@ -21,7 +21,7 @@ const NestedComments = () => {
           comment: "olla maa ",
         },
         {
-          userName: "Parul Sharma",
+          userName: "Divyanshu Pathak",
           comment: "Hello ",
         },
       ],

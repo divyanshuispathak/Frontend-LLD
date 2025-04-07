@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import Header from "./components/Header";
 import Accordion from "./components/Accordion";
 import NestedComments from "./components/comments/NestedComments";
+import ImageSlider from "./components/image-slider/ImageSlider";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/accordion" element={<Accordion />}></Route>
           <Route path="/nested-comments" element={<NestedComments />}></Route>
+          <Route path="/image" element={<ImageSlider />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
