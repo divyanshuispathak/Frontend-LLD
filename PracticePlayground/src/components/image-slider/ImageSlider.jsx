@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 
 const ImageSlider = () => {
   const images = [
@@ -14,7 +16,7 @@ const ImageSlider = () => {
   useEffect(() => {
     const i = setInterval(() => {
         handleNextImage()
-    }, 2000)
+    }, 4000)
 
     return () => {
         clearInterval(i);
@@ -41,18 +43,20 @@ const ImageSlider = () => {
 
   return (
     <div className="flex justify-center my-5">
-      <div className="w-20 h-20 bg-amber-500 my-60 flex justify-center cursor-pointer">
-        <button className="items-center" onClick={handlePrevImage}>
+      <div className="w-20 h-20 my-70 flex justify-center cursor-pointer hover:bg-gray-100 rounded-full items-center">
+        {/* <button className="items-center" onClick={handlePrevImage}>
           ⬅️
-        </button>
+        </button> */}
+        <FaArrowLeft className="items-center" onClick={handlePrevImage} />
       </div>
       <div>
-        <img className="w-200 h-150" src={images[active]} alt="shiva" />
+        <img className="w-200 h-150 rounded-2xl" src={images[active]} alt="shiva" />
       </div>
-      <div className="w-20 h-20 bg-amber-500 my-60 flex justify-center cursor-pointer">
-        <button className="items-center" onClick={handleNextImage}>
+      <div className="w-20 h-20 my-70 flex justify-center cursor-pointer hover:bg-gray-100 rounded-full items-center">
+        {/* <button className="items-center" onClick={handleNextImage}>
           ➡️
-        </button>
+        </button> */}
+        <FaArrowRight className="items-center" onClick={handleNextImage} />
       </div>
     </div>
   );
