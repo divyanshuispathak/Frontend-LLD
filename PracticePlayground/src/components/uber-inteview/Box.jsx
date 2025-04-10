@@ -7,11 +7,19 @@ const Box = ({ box }) => {
         setColor("bg-blue-500")
     }
 
+    const handleSecondBox = () => {
+      setColor("bg-blue-500")
+    }
+
+    const handleThirdBox = () => {
+      setColor("bg-blue-500")
+    }
+
   return (
     <div>
       <div className=" mt-2 ml-5 h-20 w-20 border-2 cursor-pointer" onClick={handleFirstBox}>{color}</div>
-      <div className=" mt-2 ml-5 h-20 w-20 border-2">{box[1]}</div>
-      <div className=" mt-2 ml-5 h-20 w-20 border-2">{box[2]}</div>
+      <div className=" mt-2 ml-5 h-20 w-20 border-2" onClick={handleSecondBox}>{box[1]}</div>
+      <div className=" mt-2 ml-5 h-20 w-20 border-2" onClick={handleThirdBox}>{box[2]}</div>
     </div>
   );
 };
