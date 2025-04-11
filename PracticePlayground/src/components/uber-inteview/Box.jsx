@@ -4,15 +4,15 @@ const Box = ({ box }) => {
     const [color, setColor] = useState("bg-red-500")
 
     const handleFirstBox = () => {
-        setColor("bg-blue-500")
+        setColor("bg-green-500")
     }
 
     const handleSecondBox = () => {
-      setColor("bg-blue-500")
+      setColor("bg-green-500")
     }
 
     const handleThirdBox = () => {
-      setColor("bg-blue-500")
+      setColor("bg-green-500")
     }
 
   return (
