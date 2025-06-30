@@ -14,6 +14,7 @@ const MiddleHeader = () => {
         <NavLink className="hover:bg-cyan-400" to='/nested-comments'>Nested-Comments</NavLink>
         <NavLink className="hover:bg-cyan-400" to='/image'>Image Slider</NavLink>
         <NavLink className="hover:bg-cyan-400" to='/uber'>Uber Interview</NavLink>
+        <NavLink className="hover:bg-cyan-400" to='/counter'>Counter</NavLink>
     </div>
   )
 }

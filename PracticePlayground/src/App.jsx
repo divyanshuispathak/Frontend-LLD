@@ -8,6 +8,7 @@ import Accordion from "./components/Accordion";
 import NestedComments from "./components/comments/NestedComments";
 import ImageSlider from "./components/image-slider/ImageSlider";
 import UberInterview from "./components/uber-inteview/UberInterview";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/nested-comments" element={<NestedComments />}></Route>
           <Route path="/image" element={<ImageSlider />}></Route>
           <Route path="/uber" element={<UberInterview />}></Route>
+          <Route path="/counter" element={<Counter />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
